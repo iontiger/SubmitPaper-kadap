@@ -1,6 +1,6 @@
 <div *ngIf="listing">
-  <a [routerLink]="['/listings']">뒤로 가기</a>
-  <br>
+  <!--<a [routerLink]="['/listings']">뒤로 가기</a>
+  <br>-->
   <h2 class="page-header">{{listing.title}} <small>{{listing.city}}</small></h2>
   <div class="row">
     <div class="col-md-4">
@@ -8,10 +8,10 @@
     </div>
     <div class="col-md-8">
       <ul class="list-group">
-        <li class="list-group-item">Owner: {{listing.owner}}</li>
-        <li class="list-group-item">Bedrooms: {{listing.bedrooms}}</li>
+        <li class="list-group-item">Authors: {{listing.owner}}</li>
+        <li class="list-group-item">E-mail: {{listing.bedrooms}}</li>
         <li class="list-group-item">Type: {{listing.type}}</li>
-        <li class="list-group-item">Price: {{listing.price}}</li>
+        <li class="list-group-item">Keywords: {{listing.price}}</li>
       </ul>
     </div>
     <a class="btn btn-default" [routerLink]="['/editlisting/'+listing.$key]">Edit</a>

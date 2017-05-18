@@ -1,36 +1,37 @@
-<a [routerLink]="['/listings']">Back</a>
-<br />
+<!--<a [routerLink]="['/listings']">Back</a>
+<br />-->
 <h2 class="page-header">Edit Listing</h2>
 <form (submit)="onEditSubmit()">
   <div class="form-group">
-    <label>Title</label>
+    <label>Title-한글</label>
     <input class="form-control" type="text" [(ngModel)]="title" name="title" required>
   </div>
   <div class="form-group">
-    <label>City</label>
+    <label>Title-영문</label>
     <input class="form-control" type="text" [(ngModel)]="city" name="city" required>
   </div>
   <div class="form-group">
-    <label>Owner</label>
+    <label>Authors</label>
     <input class="form-control" type="text" [(ngModel)]="owner" name="owner" required>
   </div>
   <div class="form-group">
-    <label>Bedrooms</label>
-    <input class="form-control" type="number" [(ngModel)]="bedrooms" name="bedrooms" required>
+    <label>Corresponding E-mail</label>
+    <input class="form-control" type="text" [(ngModel)]="bedrooms" name="bedrooms" required>
   </div>
   <div class="form-group">
     <label>Type</label>
     <select class="form-control" type="text" [(ngModel)]="type" name="type" required>
-      <option value="Estate">Estate</option>
-      <option value="Condo">Condo</option>
-      <option value="Apartment">Apartment</option>
+      <option value="OriginalArticle">Original Article</option>
+      <option value="Review">Review</option>
+      <option value="Letter">Letter</option>
+      <option value="BriefCommunication">Brief Communication</option>
     </select>
   </div>
   <!--<div class="form-group">
     <input id="image" name="image" [(ngModel)]="image" type="file" >
   </div>-->
   <div class="form-group">
-    <label>Price</label>
+    <label>Keywords</label>
     <input class="form-control" type="text" [(ngModel)]="price" name="price" required>
   </div>
   <input type="submit" value="submit" class="btn btn-success">

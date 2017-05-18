@@ -11,6 +11,8 @@ import * as firebase from 'firebase/app';
 })
 export class NavbarComponent implements OnInit {
 
+ 
+
   constructor(
     public af:AngularFireAuth,
     public flashMessage:FlashMessagesService,
@@ -18,6 +20,7 @@ export class NavbarComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    ;
   }
 
   login(){

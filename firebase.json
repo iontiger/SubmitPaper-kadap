@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "dist": "app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
