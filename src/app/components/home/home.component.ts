@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   login(){
     // this.af.auth.login();
     this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
