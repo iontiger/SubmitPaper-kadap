@@ -17,7 +17,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li *ngIf="!(af.authState | async)"><a (click) = "login()">Login</a></li>
-            <li *ngIf="(af.authState | async)"><a (click) = "logout()">Logout</a></li>
+            <li *ngIf="(af.authState | async)">
+              <a (click) = "logout()">
+                <font>{{af.auth.currentUser.email}} </font>
+                <strong>Logout</strong>
+              </a>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

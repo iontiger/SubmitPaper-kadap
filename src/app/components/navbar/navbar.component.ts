@@ -20,11 +20,31 @@ export class NavbarComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    ;
+    
   }
 
   login(){
     this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
+    // let memberDB = firebase.database().ref('/members');
+    // let authEmail = this.af.auth.currentUser.email;
+
+    // memberDB.orderByChild('email').on('value', function(snapshot){
+    //   // return snapshot.val().email;
+    //   // var memberDBEmail = snapshot.val().email;
+    //   snapshot.forEach(function(emailSanpshot){
+    //     console.log(emailSanpshot.val());
+    //     if(emailSanpshot.val().email == authEmail){
+    //     console.log('Success');
+    //     let memberEmail = 'match';
+    //     return true;
+    //   } else{
+    //     console.log('Fail');
+    //     let memberEmail = 'unmatch';
+    //     return true;
+    //   }
+    // });
+    // });
   }
 
   logout(){

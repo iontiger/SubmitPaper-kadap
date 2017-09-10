@@ -1,4 +1,21 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let listing of listings">
-    <a [routerLink] = "['/listing/'+listing.$key]">{{listing.title}}</a>
+<div class="list-group" >
+  <div *ngFor="let listing of listings">
+    <!--<div *ngIf="( currentUserEmail == listing.loginEmail )">-->
+      <a class="list-group-item" [routerLink] = "['/listing/'+listing.$key]">{{listing.title}}
+    <!--</div>-->
+      <span *ngFor="let member of members">
+        <a class="label label-warning" href=#>Review</a>
+
+      </span>
+      </a>
+  </div>
+</div>
+<ul>
+  <li *ngFor="let member of members">{{member.email}}</li>
 </ul>
+<div *ngFor="let member of members">
+  <div *ngIf="( currentUserEmail == member.email )" class="jumbotron text-center">
+    <h1>success</h1>
+    <h2>{{currentUserEmail}}</h2>  
+  </div>
+</div>
